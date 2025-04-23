@@ -7,7 +7,7 @@ import { Fade } from "react-awesome-reveal";
 export default function Testimony({data}) {
     return (
         <section className='container'>
-            <Fade direction="up">
+            <Fade triggerOnce direction="up">
                 <div className="row align-items-center">
                     <div className="col-auto" style={{marginRight: 60}}>
                         <div className="testimonial-hero" style={{margin: `30px 0 0 30px`}}>

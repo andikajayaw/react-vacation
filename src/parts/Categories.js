@@ -5,7 +5,7 @@ import {Fade} from 'react-awesome-reveal'
 export default function Categories({ data }) {
     return data.map((category, index1) => {
         return <section className='container' key={`category-${index1}`}>
-            <Fade direction="up">
+            <Fade triggerOnce direction="up">
                 <h4 className="mb-3 font-weight-medium">
                     {category.name}
                 </h4>
@@ -18,7 +18,7 @@ export default function Categories({ data }) {
                         </div> : category.items.map((item, index2) => {
                             return (
                                 <div className="item column-3 row-1" key={`category-${index1}-item-${index2}`} style={{display: 'grid'}}>
-                                    <Fade direction="up" delay={300*index2}>
+                                    <Fade triggerOnce direction="up" delay={300*index2}>
                                         <div className="card">
                                             {item.isPopular && <div className='tag'>Popular {' '} <span className='font-weight-light'>Choice</span></div>}
                                             <figure className="img-wrapper" style={{height: 180}}>
