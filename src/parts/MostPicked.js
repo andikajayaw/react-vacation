@@ -5,14 +5,14 @@ import Button from "../elements/Button"
 export default function MostPicked(props) {
     return (
         <section className='container' ref={props.refMostPicked}>
-            <Fade direction="up">
+            <Fade triggerOnce direction="up">
                 <h4 className="mb-3">Most Picked</h4>
                 <div className="container-grid">
                     {
                         props.data.map((item, index) => {
                             return (
                                 <div key={`mostpicked-${index}`} className={`item column-4 ${index === 0 ? "row-2" : "row-1"}`} style={{display: 'grid'}}>
-                                    <Fade direction="up" delay={200*index}>
+                                    <Fade triggerOnce direction="up" delay={200*index}>
                                         <div className="card card-featured">
                                             <div className="tag">
                                                 ${item.price}

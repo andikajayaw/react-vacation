@@ -14,9 +14,9 @@ export default function Header(props) {
     }
 
     return (
-        <Fade>
-            <header className="spacing-sm">
-                <div className='container'>
+        <header className="spacing-sm">
+            <div className='container'>
+                <Fade triggerOnce>
                     <nav className='navbar navbar-expand-lg navbar-light'>
                         <BrandIcon />
                         <div className='collapse navbar-collapse'>
@@ -44,8 +44,8 @@ export default function Header(props) {
                             </ul>
                         </div>
                     </nav>
-                </div>
-            </header>
-        </Fade>
+                </Fade>
+            </div>
+        </header>
     )
 }
